@@ -1,8 +1,8 @@
-import { Contract, providers } from "ethers";
+import { providers } from "ethers";
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
-import { abi, NFT_CONTRACT_ADDRESS, BASE_URL } from "../constants";
+import { BASE_URL } from "../constants";
 import styles from "../styles/Home.module.css";
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 
@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     if (walletConnected) getNFTs();
-  });
+  }, [walletConnected]);
 
   /*
       connectWallet: Connects the MetaMask wallet
