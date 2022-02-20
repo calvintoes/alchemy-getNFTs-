@@ -127,7 +127,7 @@ export default function Home() {
           <div className={styles.description}>
             Its an NFT collection for cool kids.
           </div>
-          <div>Make sure you're on Rinkeby Network</div>
+          <div>Make sure you&apos;re on Rinkeby Network</div>
           <div className={styles.description}></div>
           {renderButton()}
           <p>{walletConnected}</p>
